@@ -1,0 +1,15 @@
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.0.0/gems/racc-1.8.0/ext/racc/cparse
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240619-10381-pd2x0j.rb extconf.rb
+creating Makefile
+
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.0.0/gems/racc-1.8.0/ext/racc/cparse
+make DESTDIR\= clean
+
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.0.0/gems/racc-1.8.0/ext/racc/cparse
+make DESTDIR\=
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.0.0/gems/racc-1.8.0/ext/racc/cparse
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20240619-10381-pjd0kc/racc

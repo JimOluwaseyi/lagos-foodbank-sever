@@ -1,0 +1,15 @@
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.0.0/gems/stringio-3.1.1/ext/stringio
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240619-10381-8zrxn9.rb extconf.rb
+creating Makefile
+
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.0.0/gems/stringio-3.1.1/ext/stringio
+make DESTDIR\= clean
+
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.0.0/gems/stringio-3.1.1/ext/stringio
+make DESTDIR\=
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.0.0/gems/stringio-3.1.1/ext/stringio
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 stringio.so ./.gem.20240619-10381-370dga
