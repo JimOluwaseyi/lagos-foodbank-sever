@@ -1,9 +1,12 @@
 class BlogSerializer < ActiveModel::Serializer
-  attributes :id, :title, :content, :author_id, :is_important
+  include Rails.application.routes.url_helpers
+belongs_to :author, serializer: AuthorSerializer
+  attributes :id, :title, :content, :author_id, :is_important, :created_at
 
   attribute :blog_image
 
+  
   def blog_image
-    object.blog_image.attached? ? Rails.application.routes.url_helpers.rails_blob_url(object.blog_image, only_path: true) : nil
+    rails_blob_url(object.blog_image, only_path: false) if object.blog_image.attached?
   end
 end
