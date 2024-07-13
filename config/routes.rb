@@ -6,13 +6,18 @@ Rails.application.routes.draw do
       resources :authors do 
         resources :blogs
       end 
+      devise_for :admins, controllers: {
+        sessions: 'api/v1/admin/sessions' # Ensure this path matches your controller location
+      }
+
+
     end
     namespace :v2 do
       resources :agric_galleries, only: [:index, :show, :create, :destroy]
       resources :family_galleries, only: [:index, :show, :create, :destroy]
     end
       namespace :v3 do
-        resources :contact, only: [:create]
+        resources :contact, only: [:index, :create]
         resources :volunteer, only: [:create]
       end
     end

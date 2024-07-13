@@ -1,5 +1,7 @@
 class Api::V2::AgricGalleriesController < ApplicationController
   before_action :set_gallery, only: [:show, :destroy]
+  before_action :authenticate_admin!, only: [:create, :update, :destroy]
+
 
   # GET /agric_galleries
   def index
