@@ -7,7 +7,7 @@ Rails.application.routes.draw do
         resources :blogs
       end 
       devise_for :admins, controllers: {
-        sessions: 'api/v1/admin/sessions' # Ensure this path matches your controller location
+        sessions: 'api/v1/admin/sessions' 
       }
 
 
@@ -17,8 +17,8 @@ Rails.application.routes.draw do
       resources :family_galleries, only: [:index, :show, :create, :destroy]
     end
       namespace :v3 do
-        resources :contact, only: [:index, :create]
-        resources :volunteer, only: [:create]
+        resources :contacts, only: [:index, :create]
+        resources :volunteers, only: [:index,:create]
       end
     end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

@@ -1,5 +1,5 @@
 class  Api::V1::BlogsController < ApplicationController
-  before_action :authenticate_admin!, only: [:create, :update, :destroy]
+  # before_action :authenticate_admin!, only: [:create, :update, :destroy]
 
   # GET /blogs
   def index
@@ -17,7 +17,8 @@ class  Api::V1::BlogsController < ApplicationController
 
   # GET /blogs/1
   def show
-    render json: @blog
+    @blog = Blog.find(params[:id])
+    render json: @blog, serializer: BlogSerializer, show_html: true
   end
 
   # POST /blogs

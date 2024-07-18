@@ -1,4 +1,4 @@
-class Api::V3::ContactController < ApplicationController
+class Api::V3::ContactsController < ApplicationController
  def index 
   @contact = Contact.all
     render json: @contact
