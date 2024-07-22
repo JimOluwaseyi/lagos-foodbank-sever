@@ -33,6 +33,23 @@ local:
 #   primary: local
 #   mirrors: [ amazon, google, microsoft ]
 
+cloudflare_blogs:
+  service: S3
+  endpoint: https://<%= Rails.application.credentials.dig(:cloudflare, :account_id) %>.r2.cloudflarestorage.com
+  access_key_id: <%= Rails.application.credentials.dig(:cloudflare, :access_key_id) %>
+  secret_access_key: <%= Rails.application.credentials.dig(:cloudflare, :secret_access_key) %>
+  region: auto
+  bucket: <%= Rails.application.credentials.dig(:cloudflare, :bucket) %>
+
+cloudflare_gallery:
+  service: S3
+  endpoint: https://<%= Rails.application.credentials.dig(:cloudflare, :account_id) %>.r2.cloudflarestorage.com
+  access_key_id: <%= Rails.application.credentials.dig(:cloudflare, :access_key_id) %>
+  secret_access_key: <%= Rails.application.credentials.dig(:cloudflare, :secret_access_key) %>
+  region: auto
+  bucket: <%= Rails.application.credentials.dig(:cloudflare, :gallery_bucket) %>
+
+
 cloudflare:
   service: S3
   endpoint: https://<%= Rails.application.credentials.dig(:cloudflare, :account_id) %>.r2.cloudflarestorage.com
@@ -40,4 +57,5 @@ cloudflare:
   secret_access_key: <%= Rails.application.credentials.dig(:cloudflare, :secret_access_key) %>
   region: auto
   bucket: <%= Rails.application.credentials.dig(:cloudflare, :bucket) %>
+
 
