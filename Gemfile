@@ -33,6 +33,15 @@ gem "bootsnap", require: false
 gem "image_processing", "~> 1.2"
 gem 'active_model_serializers', '~> 0.10.14'
 gem "aws-sdk-s3", require: false
+gem 'kaminari'
+
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'mail'
+gem 'devise'
+gem 'devise-jwt'
+
+
+
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
 gem "rack-cors"
