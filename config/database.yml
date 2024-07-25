@@ -84,5 +84,5 @@ test:
 production:
   <<: *default
   database: lagos_foodbank_server_production
-  username: lagos_foodbank_server
-  password: <%= ENV["LAGOS_FOODBANK_SERVER_DATABASE_PASSWORD"] %>
+  username: userserver
+  password: dealer17
