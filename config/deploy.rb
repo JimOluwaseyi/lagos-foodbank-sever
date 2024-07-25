@@ -3,7 +3,7 @@ lock "~> 3.19.1"
 
 set :application, "lagos_foodbank_server"
 set :repo_url, "https://github.com/JimOluwaseyi/lagos-foodbank-sever"
-set :branch, 'main'
+set :branch, 'dev'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

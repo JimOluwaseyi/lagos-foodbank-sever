@@ -11,7 +11,7 @@
 
 # config/deploy/production.rb
 
-server '91.108.121.157', user: 'userserver', roles: %w{app db web}
+server '91.108.121.157', user: 'jimserver', roles: %w{app db web}
 
 # Define SSH options
 set :ssh_options, {
