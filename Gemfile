@@ -40,6 +40,9 @@ gem 'mail'
 gem 'devise'
 gem 'devise-jwt'
 
+gem 'capistrano', '~> 3.17'
+gem 'capistrano-rails', '~> 1.6'
+gem 'capistrano-passenger', '~> 0.2.0'
 
 
 
