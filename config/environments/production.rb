@@ -96,7 +96,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # config/environments/development.rb
-Rails.application.routes.default_url_options[:host] = 'localhost:3000'
+Rails.application.routes.default_url_options[:host] = 'api.greenafricainitiative.org'
 
 
   # Enable DNS rebinding protection and other `Host` header attacks.

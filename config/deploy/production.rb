@@ -11,14 +11,6 @@
 
 # config/deploy/production.rb
 
-server '91.108.121.157', user: 'jimserver', roles: %w{app db web}
-
-# Define SSH options
-set :ssh_options, {
-  keys: %w(~/.ssh/id_rsa), # Update this if your SSH key is located elsewhere
-  forward_agent: true,
-  auth_methods: %w(publickey)
-}
 
 
 # role-based syntax
