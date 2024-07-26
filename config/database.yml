@@ -86,6 +86,7 @@ production:
   database: lagos_foodbank_server_production
   username: <%= ENV['DB_USERNAME'] %>
   password: <%= ENV['DB_PASSWORD'] %>
+  
   # username: jimoh
   # password: dealer@128
   host: localhost
