@@ -35,7 +35,7 @@ gem 'active_model_serializers', '~> 0.10.14'
 gem "aws-sdk-s3", require: false
 gem 'kaminari'
 
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails', groups: [:development, :test, :production]
 gem 'mail'
 gem 'devise'
 gem 'devise-jwt'
