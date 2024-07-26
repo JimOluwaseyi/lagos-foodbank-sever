@@ -84,5 +84,5 @@ test:
 production:
   <<: *default
   database: lagos_foodbank_server_production
-  username: userserver
-  password: dealer17
+  username: jimoh
+  password: dealer@17
