@@ -83,11 +83,11 @@ test:
 #
 production:
   <<: *default
-  database: lagos_foodbank_server_production
+  database: lagos_foodbank
   # username: <%= ENV['DB_USERNAME'] %>
   # password: <%= ENV['DB_PASSWORD'] %>
   username: jimoh
-  password: dealer@128
+  password: dealer128
   host: localhost
   pool: 8
 
