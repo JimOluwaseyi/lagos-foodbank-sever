@@ -88,7 +88,7 @@ production:
   adapter: postgresql
   encoding: unicode
   database: lagos_foodbank
-  username: user1
+  username: jimoh
   password: dealer128
   host: localhost
   pool: 5
