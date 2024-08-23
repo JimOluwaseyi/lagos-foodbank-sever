@@ -1,7 +1,7 @@
 class BlogSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
 belongs_to :author, serializer: AuthorSerializer
-  attributes :id, :title, :content, :author_id, :is_important, :created_at
+  attributes :id, :title, :content, :excerpt, :author_id, :is_important, :created_at, :status
   
 
   attribute :blog_image
