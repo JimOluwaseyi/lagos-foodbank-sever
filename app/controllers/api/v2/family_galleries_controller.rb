@@ -1,11 +1,12 @@
 class Api::V2::FamilyGalleriesController < ApplicationController
-  # before_action :set_gallery, only: [:show, :destroy]
+  before_action :set_gallery, only: [:show, :destroy]
   # before_action :authenticate_admin!, only: [:create, :update, :destroy]
 
 
   # GET /family_galleries
   def index
-    @galleries = FamilyGallery.order(created_at: :asc).page(params[:page]).per(16)
+    per_page = params[:per_page] || 16 
+    @galleries = FamilyGallery.order(created_at: :asc).page(params[:page]).per(per_page)
     render json: {
       galleries: @galleries.map { |gallery| gallery.as_json.merge(family_images: gallery.family_images.map { |image| url_for(image) }) },
       meta:{

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_16_214122) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_22_122330) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -68,6 +68,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_16_214122) do
     t.string "instagram_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "last_name"
   end
 
   create_table "blogs", force: :cascade do |t|
@@ -78,6 +79,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_16_214122) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "blog_image"
+    t.text "excerpt"
+    t.string "status"
     t.index ["author_id"], name: "index_blogs_on_author_id"
   end
 

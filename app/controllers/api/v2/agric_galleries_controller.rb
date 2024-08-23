@@ -1,11 +1,13 @@
 class Api::V2::AgricGalleriesController < ApplicationController
-  # before_action :set_gallery, only: [:show, :destroy]
-  # before_action :authenticate_admin!, only: [:create, :update, :destroy]
+  before_action :set_gallery, only: [:show, :destroy]
 
 
   # GET /agric_galleries
   def index
-    @galleries = AgricGallery.order(created_at: :asc).page(params[:page]).per(16)
+
+    per_page = params[:per_page] || 16 
+    @galleries = AgricGallery.order(created_at: :asc).page(params[:page]).per(per_page)
+    # @galleries = AgricGallery.order(created_at: :asc).page(params[:page]).per(16)
     render json: {
       galleries: @galleries.map { |gallery| gallery.as_json.merge(images: gallery.images.map { |image| url_for(image) }) },
       meta: {

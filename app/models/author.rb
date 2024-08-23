@@ -3,6 +3,7 @@ class Author < ApplicationRecord
     has_one_attached :author_image
 
     validates :author_name, presence: true
+    validates :last_name, presence: true
     validates :author_image, presence: true
     validates :about_author, presence: true
   
