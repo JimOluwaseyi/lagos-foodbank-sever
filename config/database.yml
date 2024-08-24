@@ -83,13 +83,11 @@ test:
 #
 production:
   <<: *default
-  # username: <%= ENV['DB_USERNAME'] %>
-  # password: <%= ENV['DB_PASSWORD'] %>
   adapter: postgresql
   encoding: unicode
   database: lagos_foodbank
-  username: jimoh
-  password: dealer128
+  username: Rails.application.credentials.database[:db_username],
+  password: Rails.application.credentials.database[:db_password],
   host: localhost
   pool: 5
 
