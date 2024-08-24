@@ -86,8 +86,8 @@ production:
   adapter: postgresql
   encoding: unicode
   database: lagos_foodbank
-  username: Rails.application.credentials.database[:db_username],
-  password: Rails.application.credentials.database[:db_password],
+  username: jimoh
+  password: dealer128
   host: localhost
   pool: 5
 
