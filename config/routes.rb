@@ -2,6 +2,8 @@ Rails.application.routes.draw do
  
   namespace :api do 
     namespace :v1 do 
+      get 'blogs/counts', to: 'blogs#counts'
+
       resources :blogs, only: [:index, :show]
       resources :authors do 
         resources :blogs
