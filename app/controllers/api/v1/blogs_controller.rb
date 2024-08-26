@@ -83,6 +83,14 @@ class  Api::V1::BlogsController < ApplicationController
     end
   end
 
+  def counts
+    published_count = Blog.published.count
+    draft_count = Blog.draft.count
+    
+    render json: { published_count: published_count, draft_count: draft_count }
+  end
+  
+
   private
 
 
