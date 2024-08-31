@@ -76,9 +76,9 @@ Rails.application.configure do
     authentication:       'plain',
     enable_starttls_auto: true,
     open_timeout: 10,  
-    read_timeout: 10
+    read_timeout: 10,
     }
-  }
+  
 
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
