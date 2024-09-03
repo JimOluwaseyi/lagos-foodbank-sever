@@ -51,6 +51,14 @@ class Api::V2::AgricGalleriesController < ApplicationController
     head :no_content
   end
 
+
+  def count
+    @gallery_count=AgricGallery.count
+    render json: { count: @gallery_count }
+
+      end 
+    
+
   private
 
   def set_gallery
