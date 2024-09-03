@@ -15,6 +15,9 @@ Rails.application.routes.draw do
 
     end
     namespace :v2 do
+      get 'family_galleries/count', to: 'family_galleries#count'
+      get 'agric_galleries/count', to: 'agric_galleries#count'
+
       resources :agric_galleries, only: [:index, :show, :create, :destroy]
       resources :family_galleries, only: [:index, :show, :create, :destroy]
     end

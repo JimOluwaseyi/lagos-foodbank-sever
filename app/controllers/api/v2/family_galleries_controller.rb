@@ -49,6 +49,13 @@ class Api::V2::FamilyGalleriesController < ApplicationController
     head :no_content
   end
 
+
+  def count
+    @gallery_count = FamilyGallery.count
+    render json: { count: @gallery_count }
+  end
+  
+
   private
 
   def set_gallery
