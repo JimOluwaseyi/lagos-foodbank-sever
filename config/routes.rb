@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
- 
+
   namespace :api do 
     namespace :v1 do 
       get 'blogs/counts', to: 'blogs#counts'
@@ -24,6 +24,8 @@ Rails.application.routes.draw do
       namespace :v3 do
         resources :contacts, only: [:index, :create]
         resources :volunteers, only: [:index,:create]
+        resources :partners, only: [:index,:create]
+
       end
     end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
