@@ -1,0 +1,18 @@
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.6/ext/stringio
+/home/jimoh/.rvm/rubies/ruby-3.3.6/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.6/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250408-78849-78iynt sitelibdir\=./.gem.20250408-78849-78iynt clean
+
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.6/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250408-78849-78iynt sitelibdir\=./.gem.20250408-78849-78iynt
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.6/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250408-78849-78iynt sitelibdir\=./.gem.20250408-78849-78iynt install
+/usr/bin/install -c -m 0755 stringio.so ./.gem.20250408-78849-78iynt
+
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.3.0/gems/stringio-3.1.6/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20250408-78849-78iynt sitelibdir\=./.gem.20250408-78849-78iynt clean

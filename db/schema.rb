@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_16_214122) do
+ActiveRecord::Schema[7.2].define(version: 2024_11_23_171243) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -68,6 +68,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_16_214122) do
     t.string "instagram_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "last_name"
   end
 
   create_table "blogs", force: :cascade do |t|
@@ -78,6 +79,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_16_214122) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "blog_image"
+    t.text "excerpt"
+    t.string "status"
     t.index ["author_id"], name: "index_blogs_on_author_id"
   end
 
@@ -92,6 +95,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_16_214122) do
   end
 
   create_table "family_galleries", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "partners", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "organ_name"
+    t.string "email"
+    t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -113,6 +126,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_16_214122) do
     t.string "birthday"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "why_volunteer"
+    t.string "comfort"
+    t.string "program_type"
+    t.text "skills"
+    t.string "experience"
+    t.string "travel"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

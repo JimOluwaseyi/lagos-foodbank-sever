@@ -1,0 +1,18 @@
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+/home/jimoh/.rvm/rubies/ruby-3.3.6/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250408-78849-rdss9c sitelibdir\=./.gem.20250408-78849-rdss9c clean
+
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250408-78849-rdss9c sitelibdir\=./.gem.20250408-78849-rdss9c
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250408-78849-rdss9c sitelibdir\=./.gem.20250408-78849-rdss9c install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20250408-78849-rdss9c/racc
+
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250408-78849-rdss9c sitelibdir\=./.gem.20250408-78849-rdss9c clean
