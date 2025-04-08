@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
- 
+
   namespace :api do 
     namespace :v1 do 
+      get 'blogs/counts', to: 'blogs#counts'
+
       resources :blogs, only: [:index, :show]
       resources :authors do 
         resources :blogs
@@ -13,12 +15,17 @@ Rails.application.routes.draw do
 
     end
     namespace :v2 do
+      get 'family_galleries/count', to: 'family_galleries#count'
+      get 'agric_galleries/count', to: 'agric_galleries#count'
+
       resources :agric_galleries, only: [:index, :show, :create, :destroy]
       resources :family_galleries, only: [:index, :show, :create, :destroy]
     end
       namespace :v3 do
         resources :contacts, only: [:index, :create]
         resources :volunteers, only: [:index,:create]
+        resources :partners, only: [:index,:create]
+
       end
     end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

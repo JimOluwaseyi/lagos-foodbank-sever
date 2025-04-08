@@ -1,0 +1,19 @@
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.3.0/gems/debug-1.9.2/ext/debug
+/home/jimoh/.rvm/rubies/ruby-3.3.6/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.3.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250123-52396-fctvgo sitelibdir\=./.gem.20250123-52396-fctvgo clean
+
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.3.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250123-52396-fctvgo sitelibdir\=./.gem.20250123-52396-fctvgo
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.3.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250123-52396-fctvgo sitelibdir\=./.gem.20250123-52396-fctvgo install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20250123-52396-fctvgo/debug
+
+current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.3.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250123-52396-fctvgo sitelibdir\=./.gem.20250123-52396-fctvgo clean

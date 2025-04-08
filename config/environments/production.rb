@@ -41,7 +41,7 @@ Rails.application.configure do
   # config.assume_ssl = true
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  config.force_ssl = true
+  # config.force_ssl = true
 
   # Log to STDOUT by default
   config.logger = ActiveSupport::Logger.new(STDOUT)
@@ -66,20 +66,23 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
 
 
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.smtp_settings = {
-  #   address:              'smtp.gmail.com',
-  #   port:                 587,
-  #   domain:               'example.com',
-  #   user_name:            ENV['GMAIL_USERNAME'], 
-  #   password:             ENV['GMAIL_PASSWORD'],
-  #   authentication:       'plain',
-  #   enable_starttls_auto: true 
-  # }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                  587,
+    domain:               'greenafricainitiative.org',
+    user_name:             Rails.application.credentials.gmail[:username],
+    password:              Rails.application.credentials.gmail[:password],
+    authentication:       'plain',
+    enable_starttls_auto: true,
+    open_timeout: 10,  
+    read_timeout: 10,
+    }
+  
 
-  # config.action_mailer.perform_deliveries = true
-  # config.action_mailer.raise_delivery_errors = false
-  # config.action_mailer.default_url_options = { host: 'your_production_domain.com' }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default_url_options = { host: 'greenafricainitiative.org' }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -96,7 +99,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # config/environments/development.rb
-Rails.application.routes.default_url_options[:host] = 'localhost:3000'
+Rails.application.routes.default_url_options[:host] = 'api.greenafricainitiative.org'
 
 
   # Enable DNS rebinding protection and other `Host` header attacks.
