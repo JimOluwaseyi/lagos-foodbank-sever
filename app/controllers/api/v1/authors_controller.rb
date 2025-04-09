@@ -51,6 +51,6 @@ class Api::V1::AuthorsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def author_params
-      params.require(:author).permit(:author_name, :author_image, :about_author, :facebook_url, :twitter_url, :instagram_url)
+      params.require(:author).permit(:author_name, :last_name, :author_image, :about_author, :facebook_url, :twitter_url, :instagram_url)
     end
 end
