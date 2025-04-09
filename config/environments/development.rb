@@ -46,7 +46,9 @@ Rails.application.configure do
     password:             ENV['GMAIL_PASSWORD'], 
     authentication:       'plain',
     enable_starttls_auto: true, 
-    ssl:                  true 
+    ssl:                  true,
+    open_timeout: 10,  # Increase this value
+  read_timeout: 10
   }
 
 config.action_mailer.perform_deliveries = true

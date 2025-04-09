@@ -15,6 +15,6 @@ class Api::V3::VolunteersController < ApplicationController
     end
 
     def volunteer_params
-        params.require(:volunteer).permit(:last_name, :first_name, :email, :phone_number, :alt_number, :address, :state, :city, :country, :instagram, :facebook, :shirt_size, :occupation, :birthday)
+        params.require(:volunteer).permit(:last_name, :first_name, :email, :phone_number, :alt_number, :address, :state, :city, :country, :instagram, :facebook, :shirt_size, :occupation, :birthday, :why_volunteer, :comfort, :program_type, :skills, :experience, :travel)
     end
 end

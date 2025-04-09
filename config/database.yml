@@ -83,6 +83,11 @@ test:
 #
 production:
   <<: *default
-  database: lagos_foodbank_server_production
-  username: lagos_foodbank_server
-  password: <%= ENV["LAGOS_FOODBANK_SERVER_DATABASE_PASSWORD"] %>
+  adapter: postgresql
+  encoding: unicode
+  database: lagos_foodbank
+  username: jimoh
+  password: dealer128
+  host: localhost
+  pool: 5
+

@@ -35,11 +35,14 @@ gem 'active_model_serializers', '~> 0.10.14'
 gem "aws-sdk-s3", require: false
 gem 'kaminari'
 
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails', groups: [:development, :test, :production]
 gem 'mail'
 gem 'devise'
 gem 'devise-jwt'
 
+gem 'capistrano', '~> 3.17'
+gem 'capistrano-rails', '~> 1.6'
+gem 'capistrano-passenger', '~> 0.2.0'
 
 
 
@@ -55,4 +58,5 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
+
 

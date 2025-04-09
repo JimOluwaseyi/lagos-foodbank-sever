@@ -7,6 +7,7 @@ make DESTDIR\= sitearchdir\=./.gem.20250408-78849-wqvne9 sitelibdir\=./.gem.2025
 
 current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.3.0/gems/bcrypt-3.1.20/ext/mri
 make DESTDIR\= sitearchdir\=./.gem.20250408-78849-wqvne9 sitelibdir\=./.gem.20250408-78849-wqvne9
+
 compiling bcrypt_ext.c
 bcrypt_ext.c: In function ‘Init_bcrypt_ext’:
 bcrypt_ext.c:113:6: warning: old-style function definition [-Wold-style-definition]
@@ -34,3 +35,4 @@ make DESTDIR\= sitearchdir\=./.gem.20250408-78849-wqvne9 sitelibdir\=./.gem.2025
 
 current directory: /home/jimoh/lagos-foodbank-fullstack/lagos_foodbank_server/vendor/bundle/ruby/3.3.0/gems/bcrypt-3.1.20/ext/mri
 make DESTDIR\= sitearchdir\=./.gem.20250408-78849-wqvne9 sitelibdir\=./.gem.20250408-78849-wqvne9 clean
+
