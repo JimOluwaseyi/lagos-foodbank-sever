@@ -1,22 +1,56 @@
 class Api::V2::AgricGalleriesController < ApplicationController
-  # before_action :set_gallery, only: [:show, :destroy]
-  # before_action :authenticate_admin!, only: [:create, :update, :destroy]
+  before_action :set_gallery, only: [:show, :destroy]
 
 
   # GET /agric_galleries
-  def index
-    @galleries = AgricGallery.order(created_at: :asc).page(params[:page]).per(16)
-    render json: {
-      galleries: @galleries.map { |gallery| gallery.as_json.merge(images: gallery.images.map { |image| url_for(image) }) },
-      meta: {
-        total_pages: @galleries.total_pages,
-        current_page: @galleries.current_page,
-        next_page: @galleries.next_page,
-        prev_page: @galleries.prev_page,
-      }
+  # def index
 
+  #   per_page = params[:per_page] || 16 
+  #   @galleries = AgricGallery.order(created_at: :asc).page(params[:page]).per(per_page)
+  #   # @galleries = AgricGallery.order(created_at: :asc).page(params[:page]).per(16)
+  #   render json: {
+  #     galleries: @galleries.map { |gallery| gallery.as_json.merge(images: gallery.images.map { |image| url_for(image) }) },
+  #     meta: {
+  #       total_pages: @galleries.total_pages,
+  #       current_page: @galleries.current_page,
+  #       next_page: @galleries.next_page,
+  #       prev_page: @galleries.prev_page,
+  #     }
+
+  #   }
+  # end
+
+  def index
+    per_page = params[:per_page] || 16
+  
+    # Collect all images across galleries and ensure galleries have images
+    all_images = AgricGallery.order(created_at: :desc).flat_map do |gallery|
+      if gallery.images.attached?
+        gallery.images.map { |image| { id: gallery.id, image_url: url_for(image) } }
+      else
+        [] # Return empty array if no images attached
+      end
+    end
+  
+    # Debugging: Log the total number of images found
+    Rails.logger.info "Total images found: #{all_images.size}"
+  
+    # Paginate the images instead of galleries
+    paginated_images = Kaminari.paginate_array(all_images).page(params[:page]).per(per_page)
+  
+    render json: {
+      galleries: paginated_images,
+      meta: {
+        total_pages: paginated_images.total_pages,
+        current_page: paginated_images.current_page,
+        next_page: paginated_images.next_page,
+        prev_page: paginated_images.prev_page,
+      }
     }
   end
+  
+  
+  
 
   # GET /agric_galleries/:id
   def show
@@ -49,6 +83,21 @@ class Api::V2::AgricGalleriesController < ApplicationController
     head :no_content
   end
 
+
+  # def count
+  #   @gallery_count=AgricGallery.count
+  #   render json: { count: @gallery_count }
+
+  #     end 
+      
+      
+      def count
+      # This will sum up the number of images in each AgricGallery
+      @gallery_count = AgricGallery.sum { |gallery| gallery.images.count }
+    
+      render json: { count: @gallery_count }
+    end
+    
   private
 
   def set_gallery
