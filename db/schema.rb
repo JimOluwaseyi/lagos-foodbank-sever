@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_11_23_171243) do
-
+ActiveRecord::Schema[7.2].define(version: 2025_04_16_043525) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -95,6 +94,15 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_23_171243) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.text "desc"
+    t.string "date"
+    t.string "time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "family_galleries", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -106,6 +114,27 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_23_171243) do
     t.string "organ_name"
     t.string "email"
     t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trainees", force: :cascade do |t|
+    t.string "last_name"
+    t.string "first_name"
+    t.string "phone_number"
+    t.string "email"
+    t.string "gender"
+    t.string "address"
+    t.string "lga"
+    t.string "closest_bustop"
+    t.string "highest_quali"
+    t.string "additional_quali"
+    t.string "first_degree"
+    t.string "work_experience"
+    t.string "desired_role"
+    t.string "proficiency_excel"
+    t.string "currently_working"
+    t.text "reason_apply"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
