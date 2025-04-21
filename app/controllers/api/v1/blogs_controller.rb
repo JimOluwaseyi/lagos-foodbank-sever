@@ -72,14 +72,23 @@ class  Api::V1::BlogsController < ApplicationController
     end
   end
 
+
   def destroy
     @blog = Blog.find_by(id: params[:id], author_id: params[:author_id])
-  
+    
     if @blog
       @blog.destroy!
       render json: { message: 'Blog deleted successfully' }, status: :ok
     else
-      render json: { error: 'Blog not found' }, status: :not_found
+      # More descriptive error message
+      if Blog.exists?(params[:id])
+        render json: { 
+          error: 'Blog exists but does not belong to this author',
+          actual_author_id: Blog.find(params[:id]).author_id
+        }, status: :forbidden
+      else
+        render json: { error: 'Blog not found' }, status: :not_found
+      end
     end
   end
 

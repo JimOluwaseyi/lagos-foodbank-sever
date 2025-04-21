@@ -7,8 +7,8 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    # origins "greenafricainitiative.org"
-    origins "*"
+    origins "greenafricainitiative.org"
+    # origins "*"
 
     resource "*",
       headers: :any,
