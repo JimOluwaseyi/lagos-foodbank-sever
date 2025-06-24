@@ -1,24 +1,55 @@
-# README
+# Green africa initiative website 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Prerequisites
+#### Must have installed these on your local machine 
 
-Things you may want to cover:
+* Ruby 
+* Ruby on rails 
+* Postgresql
 
-* Ruby version
 
-* System dependencies
+### 
+ ## 🛠 Built With <a name="built-with"></a>
+### Tech Stack <a name="tech-stack"></a>
 
-* Configuration
+* Ruby on Rails 
+* Postgresql
+ 
+ 
+# Getting Started
+git clone https://github.com/JimOluwaseyi/lagos-foodbank-sever.git
 
-* Database creation
+cd lagos-foodbank-server
 
-* Database initialization
+## Setup
 
-* How to run the test suite
+#### Install gems with:
 
-* Services (job queues, cache servers, search engines, etc.)
+bundle install
 
-* Deployment instructions
+### Setup database with:
 
+* rails db:create
+* rails db:migrate 
+
+# Usage
+### Start server with:
+
+* rails s
+* This will Open http://localhost:3000/ in your browser.
+
+
+# Deployment instructions
+ So after running the commands successfully, To push modify code to the server:
+
+ * git checkout deploy 
+
+ * git push vps deploy 
+
+ #### git push vps deploy is used to push the final stages to production. 
 * ...
+
+📝 License
+This project is MIT licensed.
+
+
