@@ -1,0 +1,119 @@
+<!-- app/views/trainee_mailer/new_trainee_email.html.erb -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .header {
+      background-color: #7F8F22;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 5px 5px 0 0;
+      margin: -20px -20px 20px -20px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .content {
+      padding: 0 10px;
+    }
+    .field {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+    .field:last-child {
+      border-bottom: none;
+    }
+    .field-label {
+      font-weight: bold;
+      color: #7F8F22;
+      margin-bottom: 5px;
+    }
+    .footer {
+      margin-top: 30px;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+      font-size: 12px;
+      color: #777;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>New Trainee Application Received</h1>
+    </div>
+    
+    <div class="content">
+      <div class="field">
+        <div class="field-label">Full Name:</div>
+        <%= @trainee.first_name %> <%= @trainee.last_name %>
+      </div>
+      
+      <div class="field">
+        <div class="field-label">Contact Information:</div>
+        Email: <%= @trainee.email %><br>
+        Phone: <%= @trainee.phone_number %>
+      </div>
+      
+      <div class="field">
+        <div class="field-label">Personal Details:</div>
+        Gender: <%= @trainee.gender %><br>
+        Address: <%= @trainee.address %><br>
+        LGA: <%= @trainee.lga %><br>
+        Closest Bus Stop: <%= @trainee.closest_bustop %>
+      </div>
+      
+      <div class="field">
+        <div class="field-label">Education Background:</div>
+        Highest Qualification: <%= @trainee.highest_quali %><br>
+        Additional Qualification: <%= @trainee.additional_quali %><br>
+        First Degree Grade: <%= @trainee.first_degree %>
+      </div>
+      
+      <div class="field">
+        <div class="field-label">Professional Information:</div>
+        Work Experience (Post-NYSC): <%= @trainee.work_experience %> years<br>
+        Desired Role: <%= @trainee.desired_role %><br>
+        Excel Proficiency: <%= @trainee.proficiency_excel %>
+      </div>
+      
+      <div class="field">
+        <div class="field-label">Currently in Program?</div>
+        <%= @trainee.currently_working %>
+      </div>
+      
+      <div class="field">
+        <div class="field-label">Reason for Applying:</div>
+        <%= simple_format(@trainee.reason_apply) %>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>Application submitted on <%= @trainee.created_at.strftime("%B %d, %Y at %I:%M %p") %></p>
+      <p>Please review this application in the admin dashboard.</p>
+    </div>
+  </div>
+</body>
+</html>

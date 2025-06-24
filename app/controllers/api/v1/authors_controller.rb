@@ -40,7 +40,15 @@ class Api::V1::AuthorsController < ApplicationController
 
   # DELETE /authors/1
   def destroy
-    @author.destroy!
+    if @author.blogs.any?
+      render json: { 
+        error: "Cannot delete author with existing blog posts", 
+        blogs_count: @author.blogs.count 
+      }, status: :unprocessable_entity
+    else
+      @author.destroy!
+      head :no_content
+    end
   end
 
   private

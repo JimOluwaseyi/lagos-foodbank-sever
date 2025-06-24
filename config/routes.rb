@@ -25,6 +25,9 @@ Rails.application.routes.draw do
         resources :contacts, only: [:index, :create]
         resources :volunteers, only: [:index,:create]
         resources :partners, only: [:index,:create]
+        resources :trainees, only: [:index, :create]
+        resources :events
+
 
       end
     end
